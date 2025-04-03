@@ -79,9 +79,9 @@ function buscarProducto(){
         alert(`Producto ${buscar}\n` +
                `Nombre: ${inventario[buscar-1].nombre}\n` +
                `Cantidad: ${inventario[buscar-1].cantidad}\n` +
-               `Precio: ${inventario[buscar-1].precio}\n`)
+               `Precio: ${inventario[buscar-1].precio}\n`);
     }else{
-        alert("El numero de producto no es válido ya que no ha sido agregado.")
+        alert("El numero de producto no es válido ya que no ha sido agregado.");
     }
 
 }
