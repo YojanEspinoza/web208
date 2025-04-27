@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API_WA</title>
+    <link rel="stylesheet" href="./estilos.css">
+
+</head>
+<body>
+    <header>
+        <h1>Servicio de Atención a Cliente</h1>
+    </header>
+
+    <div class="principal">
+        <label>Nombre:</label>
+        <br>
+            <input class="campos" type="text" id="input1" required maxlength="100" placeholder="Nombre completo" >
+        <br>
+        <label>Asunto:</label>
+        <br>
+            <input class="campos" type="text" id="input2" required  list="listaAsunto" >
+            <datalist id="listaAsunto" >
+                <option value="Consultas">Consulta sobre pedidos o servicios.</option>
+                <option value="Problemas">Problemas técnicos.</option>
+                <option value="Quejas">Quejas y sugerencias.</option>
+                <option value="Información">Información de políticas de la empresa.</option>
+                <option value="Gestión">Gestión de incidencias.</option>
+            </datalist>
+        <br>
+        <label>Mensaje:</label>
+        <br>
+            <input class="campos" type="mensaje" id="input3" placeholder="Escribe el mensaje" required>
+        <br>
+        <div  class="btn">
+            <button onclick="redirect()">Enviar</button>  
+        </div>  
+    </div>
+    
+</body>
+<script src="api.js"></script>
+</html>

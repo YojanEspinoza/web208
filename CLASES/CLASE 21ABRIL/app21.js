@@ -10,17 +10,15 @@ function generarQR(){
     }else{
         
 
-    let qrApi= 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data='+encodeURIComponent(textoConcatenado);
-    
+    let qrApi = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data='+encodeURIComponent(textoConcatenado);
     let qrImg = document.createElement('img');
-    qrImg.src=qrApi;
-    qrImg.alt='Codigo de QR';
+    qrImg.src = qrApi;
+    qrImg.alt = 'Codigo de QR';
     console.log(qrImg.src);
     
     qrImg.classList.add('qr-code');
     
     document.getElementById('qr-code').appendChild(qrImg);
-    
 
 
     }
