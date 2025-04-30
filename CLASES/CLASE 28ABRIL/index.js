@@ -15,5 +15,5 @@ const servidorCreado = serverCreadoHTTP.createServer((req, res)=>{
 });
 
 servidorCreado.listen(puertoSalida,()=>{
-    console.log(`Servidor en escucha desde: http://localhost:${puertoSalida}`);
+    console.log(`Servidor en escucha desde: http://127.0.0.1:${puertoSalida}`);
 });
