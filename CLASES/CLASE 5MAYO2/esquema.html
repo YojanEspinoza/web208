@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esquema</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="divGris">
+        <div id="divAzul">
+            <div id="divRosa"></div>
+            <div class="divVerdes"></div>
+            <div class="divVerdes"></div>
+            <div class="divVerdes"></div>
+        </div>
+
+        <div id="divAzulclaro">
+            <div id="divNaranja"></div>
+            <div class="divRojos" id="textoUno">
+                <div id="titulo"></div>
+            </div>
+            <div class="divRojos"></div>
+        </div>
+
+        <div id="divVerdeclaro">
+            <div id="divCuadroazul"></div>
+            <div class="divMorados"></div>
+            <div class="divMorados"></div>
+            <div class="divMorados"></div>
+        </div>
+    </div>
+</body>
+<style>
+    
+.divVerdes{
+    background-color: green;
+    height: 50px;
+    width: 150px;
+    margin: 4px;
+    position: relative;
+    bottom: 125px;
+    right: 5px;
+    display: inline-block;
+    float: right;
+}
+
+.divRojos{
+    background-color: red;
+    width: 620px;
+    height: 320px;
+    display: block;
+    float: right;
+    margin: 10px;
+    position: relative;
+    bottom: 650px;
+    right: 10px;
+}
+
+.divMorados{
+    background-color: purple;
+    width: 260px;
+    height: 80px;
+    display: block;
+    float: right;
+    margin: 5px;
+    position: relative;
+    left: 415px;
+    bottom: 255px;
+}
+
+#divGris{
+    background-color: gray;
+    width: 1000px;
+    height: 1250px;
+}
+
+#divAzul{
+    background-color: blue;
+    height: 150px;
+    width: 980px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+#divRosa{
+    background-color: rosybrown;
+    height: 130px;
+    width: 130px;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+#divAzulclaro{
+    background-color: lightblue;
+    height: 700px;
+    width: 980px;
+    position:relative;
+    top: 20px;
+    left: 10px;
+}
+
+#divNaranja{
+    background-color: orange;
+    height: 660px;
+    width: 300px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+#textoUno{/*titulo*/
+    display: flex;
+    justify-content: center;/*centrar*/
+    align-items: center;/*alinear*/
+    overflow: hidden;
+}
+#titulo{/*hijo*/
+    width: 200px;
+    height: 70px;
+    background-color: chartreuse;
+    /*transform: scale(1.5) rotate(45deg);*/
+    position: relative;
+}
+
+#divVerdeclaro{
+    background-color: lightgreen;
+    height: 360px;
+    width: 980px;
+    position: relative;
+    top: 30px;
+    left: 10px;
+}
+
+#divCuadroazul{
+    background-color: cornflowerblue;
+    height: 260px;
+    width: 260px;
+    position: relative;
+    top: 50px;
+    left: 220px;
+}
+</style>
+</html>

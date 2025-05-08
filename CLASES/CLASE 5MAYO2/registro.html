@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<style>
+    body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 40px;
+}
+a{
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: cadetblue;
+    text-decoration: none;
+}
+form{
+    margin-top: 20px;
+    display: inline-block;
+    text-align: left;
+}
+
+label{
+    width: 100px;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button{
+    padding: 10px 10px;
+    background-color: aquamarine;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+}
+</style>
+<body>
+    <h1>Pagina de registro</h1>
+
+    <form action="#" method="post">
+        <label for="name">Correo:</label>
+        <input type="email" name="correo" id="email" placeholder="Ingresa tu correo" required maxlength="45">
+        <br><br>
+        <label for="pass">Contraseña:</label>
+        <input type="password" name="pass" id="pass" maxlength="15" required placeholder="Ingresa tu Contraseña">
+        <br><br>
+        <button type="submit">Enviar</button>
+        <button type="reset">Eliminar</button>
+    </form>
+    
+</body>
+</html>

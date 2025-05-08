@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+<style>
+    body{
+    background-color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    margin: 50px auto;
+    width: 400px;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.principal{
+    margin: auto;
+    width: 400px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    
+}
+
+.campos{
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 370px;
+}
+
+.btn{
+    text-align: center;
+}
+</style>
+<body>
+    <header>
+        <h1>Servicio de Atención a Cliente</h1>
+    </header>
+
+    <div class="principal">
+        <label>Nombre:</label>
+        <br>
+            <input class="campos" type="text" id="input1" required maxlength="100" placeholder="Nombre completo" >
+        <br>
+        <label>Asunto:</label>
+        <br>
+            <input class="campos" type="text" id="input2" required  list="listaAsunto" >
+            <datalist id="listaAsunto" >
+                <option value="Consultas">Consulta sobre pedidos o servicios.</option>
+                <option value="Problemas">Problemas técnicos.</option>
+                <option value="Quejas">Quejas y sugerencias.</option>
+                <option value="Información">Información de políticas de la empresa.</option>
+                <option value="Gestión">Gestión de incidencias.</option>
+            </datalist>
+        <br>
+        <label>Mensaje:</label>
+        <br>
+            <input class="campos" type="mensaje" id="input3" placeholder="Escribe el mensaje" required>
+        <br>
+        <div  class="btn">
+            <button onclick="redirect()">Enviar</button>  
+        </div>  
+    </div>
+    
+</body>
+<script>
+    function redirect(){
+    let var1 = document.getElementById('input1').value.trim();
+    let var2 = document.getElementById('input2').value.trim();
+    let var3 = document.getElementById('input3').value.trim();
+
+    var msj = "Hola soy " + var1 + ", mi asunto es sobre " + var2 + ": " + var3;
+
+    location.href="https://api.whatsapp.com/send?phone="+5572148646+"&text="+encodeURIComponent(msj);
+}
+</script>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Calculadora</title>
+ </head>
+<style>
+    .calculadora{
+    width: 300px;
+    margin: 50px auto;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: gray;
+}
+
+input[type="button"]{
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+</style>
+ <body>
+ 
+     <div class="calculadora">
+             <input type="text" id="pantalla" disabled>
+             <br>
+             <input type="button" value="1" onclick="agregarPantalla('1')">
+             <input type="button" value="2" onclick="agregarPantalla('2')">
+             <input type="button" value="3" onclick="agregarPantalla('3')">
+             <input type="button" value="+" onclick="agregarPantalla('+')">
+             <br>
+             <input type="button" value="4" onclick="agregarPantalla('4')">
+             <input type="button" value="5" onclick="agregarPantalla('5')">
+             <input type="button" value="6" onclick="agregarPantalla('6')">
+             <input type="button" value="-" onclick="agregarPantalla('-')">
+             <br>
+             <input type="button" value="7" onclick="agregarPantalla('7')">
+             <input type="button" value="8" onclick="agregarPantalla('8')">
+             <input type="button" value="9" onclick="agregarPantalla('9')">
+             <input type="button" value="*" onclick="agregarPantalla('*')">
+             <br>
+             <input type="button" value="c" onclick="limpiarPantalla()">
+             <input type="button" value="0" onclick="agregarPantalla('0')">
+             <input type="button" value="=" onclick="calcular()">
+             <input type="button" value="/" onclick="agregarPantalla('/')">
+ 
+     </div>
+ 
+ </body>
+ <script>
+    function agregarPantalla(value){
+    document.getElementById("pantalla").value+=value;
+}
+
+function limpiarPantalla(){
+    document.getElementById("pantalla").value="";
+}
+
+function calcular(){
+    try{
+        let result=eval(document.getElementById("pantalla").value);
+        document.getElementById("pantalla").value=result;
+    }catch{
+        document.getElementById("pantalla").value="Error";
+
+    }
+}
+ </script>
+ </html>
