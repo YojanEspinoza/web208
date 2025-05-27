@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-        <h1>Listar</h1>
+        <h1>Lista de usuarios</h1>
         <table border="2">
-            <tr>
+            <tr class="thead">
                 <td>ID</td>
                 <td>Nombre</td>
                 <td>Correo</td>
@@ -20,8 +21,8 @@
                 <td><%= user.name   %> </td>
                 <td><%= user.email  %></td>
                 <td>
-                    <a href="/edit/<%= user.id %>">Editar</a>
-                    <a href="/delete/<%= user.id %>">Eliminar</a>
+                    <a class="btn1" href="/edit/<%= user.id %>">Editar</a>
+                    <a class="btn2" href="/delete/<%= user.id %>">Eliminar</a>
                     
                 </td>
             </tr>
@@ -33,7 +34,7 @@
 
         <h2>Agregar Usuario</h2>
         <form action="/add" method="post">
-            <label for="name">Nombre</label>
+            <label for="name">Nombre:</label>
                 <input type="text" id="name" name="name" required maxlength="45" placeholder="Nombre de usuario">
             <br><br>
             <label for="email">Correo:</label>
@@ -42,4 +43,54 @@
             <button type="submit">Agregar</button>
         </form>
 </body>
+<style>
+    body{
+        background-color: lightblue;
+        font-family: Arial;
+        text-align: center;
+    }
+    table{
+        background-color: white;
+        text-align: center;
+        width: 100%;
+        border-collapse:collapse ;
+    }
+    tr, td{
+        padding: 20px;
+        border: solid 1px black;
+    }
+    input{
+        margin-bottom: 20px;
+        padding: 15px;
+        width: 350px;
+    }
+    h1, h2{
+        background-color: white
+    }
+    button{
+        color: white;
+        background-color: green;
+        text-decoration: none;
+        border-radius: 20px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: solid 1px black;
+
+    }
+    .btn1{
+        background-color: blue;
+    }
+    .btn2{
+        background-color: red;
+    }
+    .thead{
+        background-color: blue;
+        color: white;
+    }
+</style>
 </html>
